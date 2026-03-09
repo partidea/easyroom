@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  
+  /* Primary Brand Colors in Hex */
+  --color-easy-blue: #2563eb;
+  --color-easy-dark: #0f172a;
+
+  /* Overriding default palette with Hex to prevent html2canvas oklch errors */
+  --color-blue-50: #eff6ff;
+  --color-blue-100: #dbeafe;
+  --color-blue-200: #bfdbfe;
+  --color-blue-300: #93c5fd;
+  --color-blue-400: #60a5fa;
+  --color-blue-500: #3b82f6;
+  --color-blue-600: #2563eb;
+  --color-blue-700: #1d4ed8;
+  --color-blue-800: #1e40af;
+  --color-blue-900: #1e3a8a;
+  --color-blue-950: #172554;
+
+  --color-slate-50: #f8fafc;
+  --color-slate-100: #f1f5f9;
+  --color-slate-200: #e2e8f0;
+  --color-slate-300: #cbd5e1;
+  --color-slate-400: #94a3b8;
+  --color-slate-500: #64748b;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
+  --color-slate-800: #1e293b;
+  --color-slate-900: #0f172a;
+  --color-slate-950: #020617;
+
+  --color-emerald-500: #10b981;
+  --color-emerald-600: #059669;
+  
+  --color-amber-500: #f59e0b;
+  --color-amber-600: #d97706;
+
+  --color-violet-500: #8b5cf6;
+  --color-violet-600: #7c3aed;
+}
+
+@layer base {
+  body {
+    @apply bg-[#fcfcfc] text-easy-dark font-sans antialiased;
+  }
+}
+
+.slide-shadow {
+  box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.15);
+}
+
+.aspect-presentation {
+  aspect-ratio: 16 / 9;
+  container-type: size;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.premium-gradient {
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+}
+
+/* Fluid Typography based on container width (cqw) */
+.slide-h1 { font-size: 6cqw; line-height: 1.1; }
+.slide-h2 { font-size: 4cqw; line-height: 1.2; }
+.slide-h3 { font-size: 2.5cqw; line-height: 1.3; }
+.slide-p { font-size: 1.8cqw; line-height: 1.6; }
+.slide-small { font-size: 1.2cqw; }
+.slide-meta { font-size: 1cqw; }
+
+.text-balance {
+  text-wrap: balance;
+}
